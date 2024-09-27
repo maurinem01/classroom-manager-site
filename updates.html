@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Classroom Manager - Updates</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo256.png" alt="Classrooom Manager logo" />
+          <h1 class="sitename">Classroom Manager</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="updates.html" class="active">Updates</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="https://github.com/maurinem01/Classroom-Manager/" target="_blank">Source Code</a></li>
+            <li><a href="mailto:maurinem01@gmail.com">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="sec1" class="sec section">
+        <div class="container">
+          <div
+            class="row justify-content-center"
+            style="text-align: center; padding: 25px">
+            <h1>Updates</h1>
+          </div>
+
+          <div class="row justify-content-center" style="padding: 25px">
+            <div class="col-lg">
+              <span class="section-title">V1.2 (IN TESTING)</span>
+              <ul>
+                <li>
+                    The appointment icon column in the Checkin window now provides more detail:
+                    <table width="250px" style="margin:auto">
+                      <tr>
+                        <td width="30px"><img src="assets/img/WARNING_PRIOR_RED.png" /></td>
+                        <td>Early >25 minutes</td>
+                      </tr>
+                      <tr>
+                        <td width="30px"><img src="assets/img/WARNING_PRIOR_YELLOW.png" /></td>
+                        <td>Early 15-25 minutes</td>
+                      </tr>
+                      <tr>
+                        <td width="30px"><img src="assets/img/WARNING_PRIOR_GREEN.png" /></td>
+                        <td>Early 10-15 minutes</td>
+                      </tr>
+                      <tr>
+                        <td width="30px"><img src="assets/img/WARNING_AFTER_GREEN.png" /></td>
+                        <td>Late 10-15 minutes</td>
+                      </tr>
+                      <tr>
+                        <td width="30px"><img src="assets/img/WARNING_AFTER_YELLOW.png" /></td>
+                        <td>Late 15-25 minutes</td>
+                      </tr>
+                      <tr>
+                        <td width="30px"><img src="assets/img/WARNING_AFTER_RED.png" /></td>
+                        <td>Late >25 minutes</td>
+                      </tr>
+                      <tr></tr>
+                        <td width="30px"><img src="assets/img/WARNING_NOT_FOUND.png" /></td>
+                        <td>Appointment not found</td>
+                      </tr>
+                    </table>
+                </li>
+                <li>
+                    An email will only be sent if the student checks in more than 15 minutes outside of their scheduled appointment, or if no appointment is made. No email will be sent when a green triangle appears on the Checkin screen.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row justify-content-center" style="padding: 25px">
+            <div class="col-lg">
+              <span class="section-title">V1.1</span>
+              <ul>
+                <li>
+                  A new log table in the database is required to make v1.1 run.
+                  If updating from v1.0, run the query found in
+                  _install/kumon_db_v1.1_update.sql to create the new table.
+                </li>
+                <li>
+                  The original program was designed to send email notifications
+                  when students come outside of their appointment slots. In
+                  v1.1, the email feature can be enabled by following the
+                  instructions in this README, and can be disabled simply by
+                  removing the email in credentials.properties.
+                </li>
+                <li>
+                  When the email feature is disabled, the attendance summary PDF
+                  opens at the end of the class session.
+                </li>
+                <li>
+                  The attendance summary PDF includes appointment information.
+                  If the student attends outside of this appointment, it is
+                  highlighted in yellow.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer light-background" style="text-align:center; border: top 10px black">
+        <div class="container">
+          <hr />
+          <p>© <a href="http://www.maurinem.com">maurinem.com</a></p>
+          <ul class="list-unstyled social-icons light">
+            <li><a href="mailto:maurinem01@gmail.com"><span class="bi bi-google"></span></a></li>
+            <li><a href="https://github.com/maurinem01" target="_blank"><span class="bi bi-github"></span></a></li>
+          </ul>
+        </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

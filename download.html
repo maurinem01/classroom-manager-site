@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Classroom Manager - Download</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo256.png" alt="Classrooom Manager logo" />
+          <h1 class="sitename">Classroom Manager</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="updates.html">Updates</a></li>
+            <li><a href="download.html" class="active">Download</a></li>
+            <li>
+              <a
+                href="https://github.com/maurinem01/Classroom-Manager/" target="_blank">Source Code</a>
+            </li>
+            <li><a href="mailto:maurinem01@gmail.com">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="sec1" class="sec section">
+        <div class="container">
+          <div
+            class="row justify-content-center"
+            style="text-align: center; padding: 25px">
+            <h1>Download</h1>
+            <p><a href="download/download.zip">Click to download Classroom Manager v1.1</a></p>
+          </div>
+
+          <div class="row justify-content-center" style="padding: 25px">
+            <div class="col-lg">
+              <span class="section-title">REQUIREMENTS</span>
+              <p>
+                This section covers the required installations for Classroom
+                Manager to run.
+              </p>
+              <p>
+                <b>Java</b><br />
+                Java is the language that Classroom Manager is written in and must be installed to run the program. Click <a href="https://www.oracle.com/ca-en/java/technologies/downloads/" target="_blank">here</a> to download the latest version.
+                <br />
+                Click on the link beside the x64 installer to download it. Once finished, open the .exe file and follow the prompts to install Java 20.
+              </p>
+              <p><b>MySQL</b><br />
+                MySQL is the database used to hold student information, contact information, attendance logs, and configurations. This section outlines how to download, install, and configure MySQL.<br />
+                <ol>
+                  <li>Download and install MySQL Community Server from <a href="https://dev.mysql.com/downloads/mysql/" target="_blank">here</a>. Classroom Manager was created using MySQL Community Server 8.0.34 but you can choose the latest version. Select your version of choice, operating system, and preferred installer. You will then be asked to log in or create an account. If you choose to continue the download without an account, click “No thanks, just start my download” on the bottom of the screen.</li>
+                  <li>Launch the MySQL Server Setup Wizard. Make sure you are logged in as an Administrator as this step requires the installer to make changes to your computer.
+                    <ul>
+                      <li>Open the file you downloaded in Step 1.</li>
+                      <li>On the welcome screen, click Next.</li>
+                      <li>On the End-User License Agreement screen, check “I accept the terms in the License Agreement” and click Next.</li>
+                      <li>On the Choose Setup Type screen, click Typical then click Next.</li>
+                      <li>Click Install on the next screen.</li>
+                      <li>Once the Wizard is complete, check “Run MySQL Configurator” and click Finish.</li>
+                    </ul>
+                  </li>
+                  <li>Configure MySQL. Now that MySQL is installed, it needs to be configured.
+                    <ul>
+                      <li>On the welcome screen , click Next >.</li>
+                      <li>In the Type and Networking screen, the defaults can be used, using the following properties:
+                        <ul>
+                          <li>Config Type: Development Computer</li>
+                          <li>Connectivity: TCP/IP, Port: 3306, X Protocol Port: 33060</li>
+                          <li>Check "Open Windows Firewall ports for network access"</li>
+                        </ul>
+                      </li>
+                      <li>In the Accounts and Roles screen, choose a password for the root (primary admin) user of the database. If additional users are needed, they can be added using the Add User button. Keep this password in a safe place and do not forget it.</li>
+                      <li>Open credentials.properties in the root folder of this repository. Add your password beside pass= to the root password for MySQL.</li>
+                      <li>On the Windows Service screen of the MySQL setup, the default settings can be kept:
+                        <ul>
+                          <li>Check "Configure MySQL Server as a Windows Service</li>
+                          <li>Windows Service Name: keep default</li>
+                          <li>Check "Start the MySQL Server at System Startup"</li>
+                          <li>Run Windows As... Standard System Account</li>
+                        </ul>
+                      </li>
+                      <li>In the Server File Permissions screen, the first option can be chosen (“Yes, grant full access to the user running the Windows Service (if applicable) and the administrators group only. Other users and groups will not have access.”). However, this assumes the computer that the program is running on is only accessed by trusted persons. Keep in mind this database will contain student name and contact information.</li>
+                      <li>In the next window, the Sample Databases are not needed. Leave them unchecked and click Next >.</li>
+                      <li>In the Apply Configuration screen, click Execute. Once it is complete, click Next >.</li>
+                      <li>Click Finish once the configuration is complete.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </p>
+              <p>
+                <b>HeidiSQL</b><br />
+                HeidiSQL is a user interface used to access the MySQL database. If you prefer MySQL Workbench and are familiar with the process to install it, this section can be skipped. However, the rest of this guide will use HeidiSQL for importing the database.
+                <ol>
+                  <li>Download the latest version of HeidiSQL <a href="https://www.heidisql.com/download.php" target="_blank">here</a>.
+                    <ul>
+                      <li>Open the downloaded .exe file and choose who to install HeidiSQL for.
+                        <ul>
+                          <li>If the program will be used on multiple accounts, choose “Install for all users (recommend)”.</li>
+                          <li>If the program will only be used on one account, choose “Install for me only”.</li>
+                        </ul>
+                      </li>
+                      <li>Accept the License Agreement and click Next.</li>
+                      <li>Choose the folder destination where HeidiSQL will be installed and click Next.</li>
+                      <li>A Start Menu folder is not required, but is optional.</li>
+                      <li>In the Set Additional Tasks window, check off "Associate .SQL files with HeidiSQL".</li>
+                      <li>Click Install and then launch HeidiSQL.</li>
+                    </ul>
+                  </li>
+                  <li>Set up the database. After launching HeidiSQL, click the New button on the bottom-left of the screen.
+                    <ul>
+                      <li>Enter the root user credentials from the MySQL installation and choose Port 3306.</li>
+                      <li>Click Open.</li>
+                      <li>In the next window, click File > Run SQL File and choose _install/kumon_db.sql from this repository's root folder. This file generates the database used by the program.</li>
+                    </ul>
+                  </li>
+                </ol>
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center" style="padding: 25px"></div>
+            <div class="col-lg">
+              <span class="section-title">API INFORMATION</span>
+              <p>
+                This section discusses the APIs used by Classroom Manager and how to link them to the program. These services can be turned on and off through the Configurations window of the program. Each API provides extensive documentation on how to create an account and where to find the necessary properties. For brevity, this section will focus on outlining where to insert these properties to link them to Classroom Manager.
+              </p>
+              <p>
+                <b>Twilio</b><br />
+                Twilio allows the program to send text messages to parents when students arrive and are scheduled to leave the centre.
+                <br />
+                <ol>
+                  <li>Create a Twilio account at <a href="https://www.twilio.com/" target="_blank">here</a>.</li>
+                  <li>Log in to your new account. On the dashboard, there is a pane called Account Info which contains an Account SID and Auth Token. These two properties need to be entered in credentials.properties beside twilio_account_sid= and twilio_auth_token=, respectively.  In addition, a phone number must be purchased, and this property needs to be entered beside twilio_from=.</li>
+                </ol>
+              </p>
+              <p><b>Acuity Scheduling</b><br />
+                Acuity Scheduling keeps track of when students are scheduled to be in the class and how long their appointments are. When students arrive outside of their appointment slot, the instructor is alerted by email through the Gmail API (explained in the next section).
+                <ol>
+                  <li>Create an Acuity Scheduuling account <a href="https://acuityscheduling.com/" target="_blank">here</a>.</li>
+                  <li>The API credentials needed can be found <a href="https://developers.acuityscheduling.com/reference/quick-start" target="_blank">here</a> under Authentication. The User ID and API Key must be added to acuity_user_id= and acuity_api_key=, respectively.</li>
+                </ol> 
+              </p>
+              <p><b>Gmail</b><br />
+                The source code must be altered and re-packaged to enable this feature.
+                <ol>
+                  <li>Since there are limited slots in the classroom, the instructor needs to know immediately which students arrive outside of their appointment slots. The Gmail API allows the programs to send email alerts to the instructor when a student's sign-in time does not match their appointment per Acuity Scheduling (discussed in the previous section). The email address used to send and receive these messages will be the same Gmail account.</li>
+                  <li>Click <a href="https://console.cloud.google.com/apis/" target="_blank">here</a> and choose the Google account that the messages will be sent to and from.</li>
+                  <li>Click on Enabled APIs & Services. Search for Gmail API and click Enable.</li>
+                  <li>Click on Credentials, + Create Credentials, then OAuth Client ID. The application type should be Desktop app and the name can be Classroom Manager to avoid confusion. Once the OAuth client is created, a modal window will pop up with a button to Download Json. Click this button and rename the file to gmailClientSecret.json. This file needs to be moved to the src\main\java\util folder of the source code.</li>
+                  <li>The jar would need to be re-exported to include the new gmailClientSecret.json file.</li>
+                  <li>Back on the Google Cloud APIs & Services window, click on OAuth consent screen. If this program is only for personal use or is used at a small scale, External User type will suffice. Click Create. On the next screen, click Add or Remove Scopes, then check off ../auth/gmail.compose. This will allow the program to send email messages to the connected Gmail account.</li>
+                  <li>Finally, open credentials.properties and enter the email address beside alert_email=.</li>
+                </ol>
+              </p>
+              
+            </div>
+          </div>
+         
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer light-background" style="text-align:center; border: top 10px black">
+      <div class="container">
+        <hr />
+        <p>© <a href="http://www.maurinem.com">maurinem.com</a></p>
+        <ul class="list-unstyled social-icons light">
+          <li><a href="mailto:maurinem01@gmail.com"><span class="bi bi-google"></span></a></li>
+          <li><a href="https://github.com/maurinem01" target="_blank"><span class="bi bi-github"></span></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
