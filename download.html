@@ -182,15 +182,28 @@
                 </ol> 
               </p>
               <p><b>Gmail</b><br />
-                The source code must be altered and re-packaged to enable this feature.
+                Since there are limited slots in the classroom, you may want to know immediately which students arrive outside of their appointment slots. You can send email alerts to yourself when a student's sign-in time does not match their appointment per Acuity Scheduling. The email address used to send and receive these messages will be the same Gmail account.  There are two ways to enable this feature:
+              </p>
+              <p>
+                <u>Let us enable it for you</u>
                 <ol>
-                  <li>Since there are limited slots in the classroom, the instructor needs to know immediately which students arrive outside of their appointment slots. The Gmail API allows the programs to send email alerts to the instructor when a student's sign-in time does not match their appointment per Acuity Scheduling (discussed in the previous section). The email address used to send and receive these messages will be the same Gmail account.</li>
-                  <li>Click <a href="https://console.cloud.google.com/apis/" target="_blank">here</a> and choose the Google account that the messages will be sent to and from.</li>
-                  <li>Click on Enabled APIs & Services. Search for Gmail API and click Enable.</li>
-                  <li>Click on Credentials, + Create Credentials, then OAuth Client ID. The application type should be Desktop app and the name can be Classroom Manager to avoid confusion. Once the OAuth client is created, a modal window will pop up with a button to Download Json. Click this button and rename the file to gmailClientSecret.json. This file needs to be moved to the src\main\java\util folder of the source code.</li>
-                  <li>The jar would need to be re-exported to include the new gmailClientSecret.json file.</li>
-                  <li>Back on the Google Cloud APIs & Services window, click on OAuth consent screen. If this program is only for personal use or is used at a small scale, External User type will suffice. Click Create. On the next screen, click Add or Remove Scopes, then check off ../auth/gmail.compose. This will allow the program to send email messages to the connected Gmail account.</li>
-                  <li>Finally, open credentials.properties and enter the email address beside alert_email=.</li>
+                  <li><a href="mailto:classroom.manager.notifications@gmail.com?subject=Enable Email">Contact the developer</a> and provide the email address you'd like to use for this feature.</li>
+                  <li>Please allow up to 24 hours for a response.</li>
+                  <li>Once you receive confirmation, open credentials.properties and enter the email address beside "alert_email=".</li>
+                </ol>
+              </p>
+              <p>
+                Refer to our <a href="privacy.html">Privary Policy</a> for information about what we do with your email address.
+              </p>
+              <p><u>You'd prefer to enable it yourself</u>
+                <ol>
+                  <li><a href="https://github.com/maurinem01/Classroom-Manager/" target="_blank">Pull the source code</a>.
+                  <li><a href="https://console.cloud.google.com/apis/" target="_blank">Open Google Cloud APIs</a> and choose the Google account that the messages will be sent to and from.</li>
+                  <li>Click on "Enabled APIs & Services". Search for "Gmail API" and click "Enable".</li>
+                  <li>Click on "Credentials", "+ Create Credentials", then "OAuth Client ID". The application type should be Desktop app and the name can be "Classroom Manager" to avoid confusion. Once the OAuth client is created, a modal window will pop up with a button to Download Json. Click this button and rename the file to "gmailClientSecret.json". This file needs to be moved to the src\main\java\util folder.</li>
+                  <li>Back on the Google Cloud APIs & Services window, click on "OAuth consent screen". "External User" type will suffice for this program. Click "Create". On the next screen, click "Add or Remove Scopes", then check off ".../auth/gmail.send". This will allow the program to send email messages to the connected Gmail account.</li>
+                  <li>Re-export the .jar file to include the new gmailClientSecret.json file.  Move the new Classroom-Manager.jar file to where you saved this program and overwrite the old file.</li>
+                  <li>Finally, open credentials.properties and enter the email address beside "alert_email=".</li>
                 </ol>
               </p>
               
