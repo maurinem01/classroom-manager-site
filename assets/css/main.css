@@ -418,6 +418,27 @@ h6 {
   }
 }
 
+.table-chart {
+  width: 80%;
+  margin: auto;
+}
+
+.left {
+  width: 30%
+}
+
+.table-chart tr {
+  border-color: #4D4948;
+  border-width: 1px;
+  border-left: none;
+  border-right: none;
+}
+
+.table-chart td {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -426,7 +447,7 @@ h6 {
   color: var(--default-color);
   padding: 60px 0;
   font-size: 14px;
-  /* border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%); */
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .footer a {
