@@ -41,10 +41,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="releases.html">Releases</a></li>
             <li><a href="download.html" class="active">Download</a></li>
-            <li>
-              <a
-                href="https://github.com/maurinem01/Classroom-Manager/" target="_blank">Source Code</a>
-            </li>
             <li><a href="mailto:maurinem01@gmail.com">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -62,8 +58,11 @@
               <div class="col">
                 <h1>Download</h1>
                 <br />
+                <h5>The full version of ClassroomManager is no longer available for public download.</h5>
                 <p style="text-align:center">
-                  <a href="download/Classroom-Manager-v1.3.zip" class="btn btn-get-started">Click to download Classroom Manager v1.3</a>
+                  <a href="download/ClassroomManagerDemo.zip" class="btn btn-get-started">Click to download the demo instead.</a>
+                </p>
+                    
                 </p>
               </div>
             </div>
@@ -79,8 +78,11 @@
               </p>
               <p>
                 <b>Java</b><br />
-                Java is the language that Classroom Manager is written in and must be installed to run the program.  This program requires Java 17 or later. <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html" target="_blank">Click here to download Java 17.</a>
+                Java is the language that Classroom Manager is written in and must be installed to run the program.  This program requires Java 17 or later. <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html" target="_blank">Click here to download Java 17.</a>  This is all you'll need to run the demo.
               </p>
+              <hr />
+              <h5 align="center">The requirements below are only for the full version.</h5>
+              <br />
               <p><b>MySQL</b><br />
                 MySQL is the database used to hold student information, contact information, attendance logs, and configurations. This section outlines how to download, install, and configure MySQL.<br />
                 <ol>
@@ -177,7 +179,7 @@
               <p><b>Acuity Scheduling</b><br />
                 Acuity Scheduling keeps track of when students are scheduled to be in the class and how long their appointments are. When students arrive outside of their appointment slot, the instructor is alerted by email through the Gmail API (explained in the next section).
                 <ol>
-                  <li><a href="https://acuityscheduling.com/" target="_blank">Create an Acuity Scheduuling account here</a>.</li>
+                  <li><a href="https://acuityscheduling.com/" target="_blank">Create an Acuity Scheduling account here</a>.</li>
                   <li>The API credentials needed can be found <a href="https://developers.acuityscheduling.com/reference/quick-start" target="_blank">here</a> under Authentication. The User ID and API Key must be added to "acuity_user_id=" and "acuity_api_key=", respectively.</li>
                 </ol> 
               </p>
@@ -185,7 +187,6 @@
                 Since there are limited slots in the classroom, you may want to know immediately which students arrive outside of their appointment slots. You can send email alerts to yourself when a student's sign-in time does not match their appointment per Acuity Scheduling. The email address used to send and receive these messages will be the same Gmail account.  There are two ways to enable this feature:
               </p>
               <p>
-                <u>Let us enable it for you</u>
                 <ol>
                   <li><a href="mailto:classroom.manager.notifications@gmail.com?subject=Enable Email">Contact the developer</a> and provide the email address you'd like to use for this feature.</li>
                   <li>Please allow up to 24 hours for a response.</li>
@@ -195,17 +196,7 @@
               <p>
                 Refer to our <a href="privacy.html">Privary Policy</a> for information about what we do with your email address.
               </p>
-              <p><u>You'd prefer to enable it yourself</u>
-                <ol>
-                  <li><a href="https://github.com/maurinem01/Classroom-Manager/" target="_blank">Pull the source code</a>.
-                  <li><a href="https://console.cloud.google.com/apis/" target="_blank">Open Google Cloud APIs</a> and choose the Google account that the messages will be sent to and from.</li>
-                  <li>Click on "Enabled APIs & Services". Search for "Gmail API" and click "Enable".</li>
-                  <li>Click on "Credentials", "+ Create Credentials", then "OAuth Client ID". The application type should be Desktop app and the name can be "Classroom Manager" to avoid confusion. Once the OAuth client is created, a modal window will pop up with a button to Download Json. Click this button and rename the file to "gmailClientSecret.json". This file needs to be moved to the src\main\java\util folder.</li>
-                  <li>Back on the Google Cloud APIs & Services window, click on "OAuth consent screen". "External User" type will suffice for this program. Click "Create". On the next screen, click "Add or Remove Scopes", then check off ".../auth/gmail.send". This will allow the program to send email messages to the connected Gmail account.</li>
-                  <li>Re-export the .jar file to include the new gmailClientSecret.json file.  Move the new Classroom-Manager.jar file to where you saved this program and overwrite the old file.</li>
-                  <li>Finally, open credentials.properties and enter the email address beside "alert_email=".</li>
-                </ol>
-              </p>
+
               
             </div>
           </div>
